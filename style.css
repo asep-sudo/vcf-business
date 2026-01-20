@@ -1,92 +1,162 @@
-/* Reset Dasar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #f0f2f5; /* Warna latar belakang luar */
-    font-family: 'Inter', sans-serif;
+    background: #0d6e7a; /* Warna dasar jika gambar tidak dimuat */
     display: flex;
     justify-content: center;
-    padding: 20px 0;
+    min-height: 100vh;
 }
 
-/* Container Utama (Kartu) */
-.container {
-    background-color: white;
+.main-wrapper {
     width: 100%;
-    max-width: 400px; /* Lebar maksimal seukuran layar HP */
-    min-height: 90vh;
-    border-radius: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 40px;
+    max-width: 450px;
+    position: relative;
+    /* Menggunakan background image dengan efek blur seperti di gambar */
+    background: linear-gradient(rgba(13, 110, 122, 0.8), rgba(13, 110, 122, 0.8)), 
+                url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
 }
 
-/* Bagian Atas/Header */
-.header-img {
-    width: 100%;
-    height: 180px;
-    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Ganti dengan warna brand Anda */
-    margin-bottom: -60px;
-}
-
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
-    background-color: #ddd;
-}
-
-/* Info Nama */
-.info {
+/* Logo */
+.logo-container {
     text-align: center;
-    margin-top: 15px;
-    padding: 0 20px;
+    margin-bottom: 30px;
+    padding-top: 10px;
 }
 
-.info h1 {
-    font-size: 1.5rem;
-    color: #333;
+.main-logo {
+    max-width: 180px;
+    filter: brightness(0) invert(1); /* Membuat logo jadi putih jika perlu */
 }
 
-.info p {
-    color: #666;
-    font-size: 0.9rem;
+/* Profile Card */
+.profile-card {
+    background: #083d47; /* Biru gelap pada kartu */
+    border-radius: 40px;
+    padding: 0 0 30px 0;
+    text-align: center;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.photo-wrapper {
+    padding: 20px;
+}
+
+.profile-photo {
+    width: 100%;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.profile-info h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.profile-info p {
+    font-size: 16px;
+    opacity: 0.8;
     margin-top: 5px;
 }
 
-/* Tombol */
-.links {
-    width: 100%;
-    padding: 20px;
+/* Contact Section */
+.contact-section {
+    padding: 0 10px;
+}
+
+.contact-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.divider {
+    height: 1px;
+    border-bottom: 1.5px dotted rgba(255, 255, 255, 0.4);
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.contact-item a, .contact-item p {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.btn-direction {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #00a89e;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    float: right;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    clear: both;
     margin-top: 20px;
 }
 
-.btn {
+.website-link {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+.btn-add-contact {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 15px;
+    background: #00a89e;
+    color: white;
     text-decoration: none;
-    padding: 15px;
-    margin-bottom: 12px;
-    border-radius: 12px;
+    padding: 8px 8px 8px 20px;
+    border-radius: 40px;
     font-weight: 600;
-    transition: transform 0.2s ease;
+    font-size: 14px;
 }
 
-.btn:active {
-    transform: scale(0.98);
+.plus-icon {
+    background: white;
+    color: #00a89e;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
 }
-
-/* Warna Spesifik Tombol */
-.btn-vcf { background-color: #333; color: white; }
-.btn-wa { background-color: #25D366; color: white; }
-.btn-web { background-color: #ffffff; color: #333; border: 1px solid #ddd; }
