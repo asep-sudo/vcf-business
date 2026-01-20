@@ -43,10 +43,9 @@ body {
 /* Profile Card */
 .profile-card {
     border-radius: 30px;
-    padding: 0 0 30px 0;
     text-align: center;
-    margin-bottom: 30px;
 	overflow: hidden;
+	padding-bottom: 20px;
 }
 
 .photo-wrapper {
@@ -85,7 +84,7 @@ body {
 
 /* Contact Section */
 .contact-section {
-    padding: 0 10px;
+    padding: 20px 10px 10px 10px;
 }
 
 .contact-header {
@@ -132,6 +131,7 @@ body {
     border-radius: 30px;
     margin: 0 auto 20px auto; /* KUNCI: auto kiri & kanan membuat elemen ke tengah */
     width: fit-content;      /* Tombol selebar kontennya saja */
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .footer-row, .website {
@@ -163,6 +163,7 @@ body {
     padding: 8px 8px 8px 20px;
     border-radius: 40px;
     font-size: 14px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .plus-icon {
@@ -177,6 +178,37 @@ body {
     font-size: 24px;
 }
 
+.btn-langsung {
+    display: flex;            /* Mengaktifkan mode baris */
+    justify-content: center;  /* Mengatur posisi ke tengah secara horizontal */
+    align-items: center;      /* Mengatur posisi ke tengah secara vertikal */
+    gap: 20px;                /* Memberikan jarak antar tombol */
+    padding: 20px 0;           /* Memberikan jarak atas dan bawah */
+}
+
+.btn-langsung a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;              /* Ukuran lebar lingkaran */
+    height: 50px;             /* Ukuran tinggi lingkaran */
+    border-radius: 50%;       /* Membuat bentuk lingkaran sempurna */
+    background-color: #00a89e; /* Warna hijau teal sesuai brand JMT */
+    color: white;             /* Warna ikon */
+    text-decoration: none;
+    font-size: 24px;          /* Ukuran ikon */
+    transition: transform 0.2s; /* Efek halus saat ditekan */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-langsung a:active {
+    transform: scale(0.9);    /* Efek tombol membal saat diklik di HP */
+}
+
+/* Opsional: Warna berbeda untuk WhatsApp agar lebih kontras 
+.btn-langsung a[href*="wa.me"] {
+    background-color: #25D366; 
+}*/
 
 
 
