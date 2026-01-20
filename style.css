@@ -17,8 +17,7 @@ body {
     max-width: 450px;
     position: relative;
     /* Menggunakan background image dengan efek blur seperti di gambar */
-    background: linear-gradient(rgba(13, 110, 122, 0.8), rgba(13, 110, 122, 0.8)), 
-                url('images/bg.png');
+    background: url('images/bg.png');
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -44,7 +43,6 @@ body {
     padding: 0 0 30px 0;
     text-align: center;
     margin-bottom: 30px;
-    overflow: hidden;
 }
 
 .photo-wrapper {
@@ -52,7 +50,7 @@ body {
 
 .profile-photo {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    max-height: 350px;
     border-radius: 20px;
     object-fit: cover;
     object-position: top;
@@ -162,5 +160,6 @@ body {
     align-items: center;
     font-size: 24px;
 }
+
 
 
