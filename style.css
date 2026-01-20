@@ -12,15 +12,14 @@ body {
     min-height: 100vh;
 	    /* Menggunakan background image dengan efek blur seperti di gambar */
     background: url('images/bg.png');
-    /*background-size: cover;*/
-    background-position: center;
     padding: 30px;
     color: white;
-	/* INI KUNCINYA AGAR DIAM */
-    background-attachment: fixed; 
-    
-    /* Tambahan agar background tidak berulang jika konten sangat panjang */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Latar belakang dikunci di sini */
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
 }
 
 .main-wrapper {
@@ -209,6 +208,7 @@ body {
 .btn-langsung a[href*="wa.me"] {
     background-color: #25D366; 
 }*/
+
 
 
 
